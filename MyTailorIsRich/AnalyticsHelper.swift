@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import RxSwift
 
 class AnalyticsHelper {
 
     static let instance = AnalyticsHelper()
 
-    let viewMasterEvent = "ViewMaster"
+    let viewMasterEvent = PublishSubject<Void>()
 
     // Detail CRUD
-    let createDetailEvent = "CreateDetail"
-    let viewDetailEvent = "ViewDetail"
+    let createDetailEvent = PublishSubject<NSDate>()
+    let viewDetailEvent = PublishSubject<NSDate>()
 
 }

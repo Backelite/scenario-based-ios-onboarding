@@ -34,8 +34,7 @@ class MasterViewController: UITableViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        NSNotificationCenter.defaultCenter().postNotificationName(AnalyticsHelper.instance.viewMasterEvent,
-                                                                  object: self)
+        AnalyticsHelper.instance.viewMasterEvent.on(.Next())
     }
 
     func insertNewObject(sender: AnyObject) {
@@ -44,8 +43,7 @@ class MasterViewController: UITableViewController {
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
 
-        NSNotificationCenter.defaultCenter().postNotificationName(AnalyticsHelper.instance.createDetailEvent,
-                                                                  object: self, userInfo: ["value": newObject])
+        AnalyticsHelper.instance.createDetailEvent.on(.Next(newObject))
     }
 
     // MARK: - Segues

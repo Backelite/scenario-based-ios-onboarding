@@ -7,21 +7,30 @@
 //
 
 import Foundation
+import RxSwift
 
 class StatsHelper {
 
+    let disposeBag = DisposeBag()
+
     init() {
-        NSNotificationCenter.defaultCenter().addObserverForName(AnalyticsHelper.instance.viewMasterEvent, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
-            print("event: view master")
-        }
+        AnalyticsHelper.instance.viewMasterEvent
+            .subscribeNext {
+                print("event: view master")
+            }
+            .addDisposableTo(disposeBag)
 
-        NSNotificationCenter.defaultCenter().addObserverForName(AnalyticsHelper.instance.createDetailEvent, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
-            print("event: create detail - \(notification.userInfo!["value"]! as! NSDate)")
-        }
+        AnalyticsHelper.instance.createDetailEvent
+            .subscribeNext { next in
+                print("event: create detail - \(next)")
+            }
+            .addDisposableTo(disposeBag)
 
-        NSNotificationCenter.defaultCenter().addObserverForName(AnalyticsHelper.instance.viewDetailEvent, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
-            print("event: view detail - \(notification.userInfo!["value"]! as! NSDate)")
-        }
+        AnalyticsHelper.instance.viewDetailEvent
+            .subscribeNext { next in
+                print("event: view detail - \(next)")
+            }
+            .addDisposableTo(disposeBag)
     }
 
 }

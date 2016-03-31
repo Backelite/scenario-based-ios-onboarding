@@ -37,9 +37,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        NSNotificationCenter.defaultCenter().postNotificationName(AnalyticsHelper.instance.viewDetailEvent,
-                                                                  object: self,
-                                                                  userInfo: ["value": detailItem!])
+        AnalyticsHelper.instance.viewDetailEvent.on(.Next(detailItem as! NSDate))
     }
 
 }
