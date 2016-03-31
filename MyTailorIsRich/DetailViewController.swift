@@ -35,5 +35,12 @@ class DetailViewController: UIViewController {
         self.configureView()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName(AnalyticsHelper.instance.viewDetailEvent,
+                                                                  object: self,
+                                                                  userInfo: ["value": detailItem!])
+    }
+
 }
 

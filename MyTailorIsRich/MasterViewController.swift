@@ -32,10 +32,20 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName(AnalyticsHelper.instance.viewMasterEvent,
+                                                                  object: self)
+    }
+
     func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
+        let newObject = NSDate()
+        objects.insert(newObject, atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+
+        NSNotificationCenter.defaultCenter().postNotificationName(AnalyticsHelper.instance.createDetailEvent,
+                                                                  object: self, userInfo: ["value": newObject])
     }
 
     // MARK: - Segues

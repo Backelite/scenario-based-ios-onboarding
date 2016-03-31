@@ -13,6 +13,8 @@
 		EBE9EDF61CAD58360059EF2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE9EDF41CAD58360059EF2D /* Main.storyboard */; };
 		EBE9EDF81CAD58360059EF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE9EDF71CAD58360059EF2D /* Assets.xcassets */; };
 		EBE9EDFB1CAD58360059EF2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE9EDF91CAD58360059EF2D /* LaunchScreen.storyboard */; };
+		EBE9EE051CAD5A6F0059EF2D /* AnalyticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EE041CAD5A6F0059EF2D /* AnalyticsHelper.swift */; };
+		EBE9EE071CAD5E260059EF2D /* StatsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EE061CAD5E260059EF2D /* StatsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EBE9EDF71CAD58360059EF2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBE9EDFA1CAD58360059EF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBE9EDFC1CAD58360059EF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE9EE041CAD5A6F0059EF2D /* AnalyticsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsHelper.swift; sourceTree = "<group>"; };
+		EBE9EE061CAD5E260059EF2D /* StatsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				EBE9EDEE1CAD58360059EF2D /* AppDelegate.swift */,
 				EBE9EDF01CAD58360059EF2D /* MasterViewController.swift */,
 				EBE9EDF21CAD58360059EF2D /* DetailViewController.swift */,
+				EBE9EE041CAD5A6F0059EF2D /* AnalyticsHelper.swift */,
+				EBE9EE061CAD5E260059EF2D /* StatsHelper.swift */,
 				EBE9EDF41CAD58360059EF2D /* Main.storyboard */,
 				EBE9EDF71CAD58360059EF2D /* Assets.xcassets */,
 				EBE9EDF91CAD58360059EF2D /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE9EDF31CAD58360059EF2D /* DetailViewController.swift in Sources */,
+				EBE9EE071CAD5E260059EF2D /* StatsHelper.swift in Sources */,
 				EBE9EDF11CAD58360059EF2D /* MasterViewController.swift in Sources */,
 				EBE9EDEF1CAD58360059EF2D /* AppDelegate.swift in Sources */,
+				EBE9EE051CAD5A6F0059EF2D /* AnalyticsHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
