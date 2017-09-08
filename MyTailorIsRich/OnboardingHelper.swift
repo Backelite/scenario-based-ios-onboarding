@@ -32,14 +32,7 @@ public class OnboardingHelper {
     }
 
     private func setupICloudActivationScenario() {
-        AnalyticsHelper.instance.createDetailEvent
-            .flatMap { _ in
-                return AnalyticsHelper.instance.viewDetailEvent
-            }
-            .flatMap { _ in
-                return AnalyticsHelper.instance.viewMasterEvent
-            }
-            .take(1)
+        OnboardingHelper.iCloudActivationScenario()
             .subscribe(onNext: { _ in
                 let alert = UIAlertView(title: "iCloud", message: "Voulez-vous utiliser iCloud pour sauvegarder vos dates ?", delegate: nil, cancelButtonTitle: "Non", otherButtonTitles: "Oui")
                 alert.show()
