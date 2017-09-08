@@ -35,9 +35,9 @@ class DetailViewController: UIViewController {
         self.configureView()
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AnalyticsHelper.instance.viewDetailEvent.on(.Next(detailItem as! NSDate))
+        AnalyticsHelper.instance.viewDetailEvent.on(.next(detailItem as! Date))
     }
 
 }

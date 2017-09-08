@@ -16,7 +16,7 @@ class AnalyticsHelper {
     let viewMasterEvent = PublishSubject<Void>()
 
     // Detail CRUD
-    let createDetailEvent = PublishSubject<NSDate>()
-    let viewDetailEvent = PublishSubject<NSDate>()
+    let createDetailEvent = PublishSubject<Date>()
+    let viewDetailEvent = PublishSubject<Date>()
 
 }

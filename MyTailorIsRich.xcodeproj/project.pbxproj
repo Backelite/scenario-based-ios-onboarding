@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39146FE377D528540A23BBE5 /* Pods_MyTailorIsRichTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F461E777CE9357EF29A88 /* Pods_MyTailorIsRichTests.framework */; };
+		CCD989381F62CDCF009404E3 /* MyTailorIsRichTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD989371F62CDCF009404E3 /* MyTailorIsRichTests.swift */; };
 		EBE9EDEF1CAD58360059EF2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EDEE1CAD58360059EF2D /* AppDelegate.swift */; };
 		EBE9EDF11CAD58360059EF2D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EDF01CAD58360059EF2D /* MasterViewController.swift */; };
 		EBE9EDF31CAD58360059EF2D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EDF21CAD58360059EF2D /* DetailViewController.swift */; };
@@ -19,10 +21,26 @@
 		EC56EDDB137D7C925E3D120F /* Pods_MyTailorIsRich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF3A6417339C599A58C7BFE /* Pods_MyTailorIsRich.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CCD9893A1F62CDCF009404E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE9EDE31CAD58360059EF2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE9EDEA1CAD58360059EF2D;
+			remoteInfo = MyTailorIsRich;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		111F461E777CE9357EF29A88 /* Pods_MyTailorIsRichTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTailorIsRichTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF3A6417339C599A58C7BFE /* Pods_MyTailorIsRich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTailorIsRich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24840060CA83CFD7BBD012CE /* Pods-MyTailorIsRich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRich.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRich/Pods-MyTailorIsRich.debug.xcconfig"; sourceTree = "<group>"; };
+		2E000B516E91F44E77221F69 /* Pods-MyTailorIsRichTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRichTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests.release.xcconfig"; sourceTree = "<group>"; };
+		A195BC0954FDE560497E2064 /* Pods-MyTailorIsRichTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRichTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6BE938A3BBA44F9C076A59 /* Pods-MyTailorIsRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRich.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRich/Pods-MyTailorIsRich.release.xcconfig"; sourceTree = "<group>"; };
+		CCD989351F62CDCF009404E3 /* MyTailorIsRichTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTailorIsRichTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD989371F62CDCF009404E3 /* MyTailorIsRichTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTailorIsRichTests.swift; sourceTree = "<group>"; };
+		CCD989391F62CDCF009404E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE9EDEB1CAD58360059EF2D /* MyTailorIsRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTailorIsRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE9EDEE1CAD58360059EF2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE9EDF01CAD58360059EF2D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +55,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CCD989321F62CDCF009404E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39146FE377D528540A23BBE5 /* Pods_MyTailorIsRichTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBE9EDE81CAD58360059EF2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1EF3A6417339C599A58C7BFE /* Pods_MyTailorIsRich.framework */,
+				111F461E777CE9357EF29A88 /* Pods_MyTailorIsRichTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -61,14 +88,26 @@
 			children = (
 				24840060CA83CFD7BBD012CE /* Pods-MyTailorIsRich.debug.xcconfig */,
 				AB6BE938A3BBA44F9C076A59 /* Pods-MyTailorIsRich.release.xcconfig */,
+				A195BC0954FDE560497E2064 /* Pods-MyTailorIsRichTests.debug.xcconfig */,
+				2E000B516E91F44E77221F69 /* Pods-MyTailorIsRichTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCD989361F62CDCF009404E3 /* MyTailorIsRichTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCD989371F62CDCF009404E3 /* MyTailorIsRichTests.swift */,
+				CCD989391F62CDCF009404E3 /* Info.plist */,
+			);
+			path = MyTailorIsRichTests;
 			sourceTree = "<group>";
 		};
 		EBE9EDE21CAD58360059EF2D = {
 			isa = PBXGroup;
 			children = (
 				EBE9EDED1CAD58360059EF2D /* MyTailorIsRich */,
+				CCD989361F62CDCF009404E3 /* MyTailorIsRichTests */,
 				EBE9EDEC1CAD58360059EF2D /* Products */,
 				B0F6C2CB1C62761A345C9A71 /* Pods */,
 				53ECEBA5F698949B41A01F5A /* Frameworks */,
@@ -79,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE9EDEB1CAD58360059EF2D /* MyTailorIsRich.app */,
+				CCD989351F62CDCF009404E3 /* MyTailorIsRichTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,16 +143,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CCD989341F62CDCF009404E3 /* MyTailorIsRichTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCD9893E1F62CDCF009404E3 /* Build configuration list for PBXNativeTarget "MyTailorIsRichTests" */;
+			buildPhases = (
+				612B5DCB0F6D467E0F4AC947 /* [CP] Check Pods Manifest.lock */,
+				CCD989311F62CDCF009404E3 /* Sources */,
+				CCD989321F62CDCF009404E3 /* Frameworks */,
+				CCD989331F62CDCF009404E3 /* Resources */,
+				CCF925FDD78B7A0CCC54A5F8 /* [CP] Embed Pods Frameworks */,
+				BDF1A91BCEB7C693702AB56D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCD9893B1F62CDCF009404E3 /* PBXTargetDependency */,
+			);
+			name = MyTailorIsRichTests;
+			productName = MyTailorIsRichTests;
+			productReference = CCD989351F62CDCF009404E3 /* MyTailorIsRichTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EBE9EDEA1CAD58360059EF2D /* MyTailorIsRich */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBE9EDFF1CAD58360059EF2D /* Build configuration list for PBXNativeTarget "MyTailorIsRich" */;
 			buildPhases = (
-				0C685306D889FD49D0DE77EB /* Check Pods Manifest.lock */,
+				0C685306D889FD49D0DE77EB /* [CP] Check Pods Manifest.lock */,
 				EBE9EDE71CAD58360059EF2D /* Sources */,
 				EBE9EDE81CAD58360059EF2D /* Frameworks */,
 				EBE9EDE91CAD58360059EF2D /* Resources */,
-				F2185981C9B8342C821794CB /* Embed Pods Frameworks */,
-				D56870A8E968CBEFC82E3F00 /* Copy Pods Resources */,
+				F2185981C9B8342C821794CB /* [CP] Embed Pods Frameworks */,
+				D56870A8E968CBEFC82E3F00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,10 +190,15 @@
 		EBE9EDE31CAD58360059EF2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Backelite;
 				TargetAttributes = {
+					CCD989341F62CDCF009404E3 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBE9EDEA1CAD58360059EF2D;
+					};
 					EBE9EDEA1CAD58360059EF2D = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -152,11 +218,19 @@
 			projectRoot = "";
 			targets = (
 				EBE9EDEA1CAD58360059EF2D /* MyTailorIsRich */,
+				CCD989341F62CDCF009404E3 /* MyTailorIsRichTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CCD989331F62CDCF009404E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBE9EDE91CAD58360059EF2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,29 +244,87 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C685306D889FD49D0DE77EB /* Check Pods Manifest.lock */ = {
+		0C685306D889FD49D0DE77EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTailorIsRich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		612B5DCB0F6D467E0F4AC947 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTailorIsRichTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF1A91BCEB7C693702AB56D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D56870A8E968CBEFC82E3F00 /* Copy Pods Resources */ = {
+		CCF925FDD78B7A0CCC54A5F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D56870A8E968CBEFC82E3F00 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,15 +332,18 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTailorIsRich/Pods-MyTailorIsRich-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2185981C9B8342C821794CB /* Embed Pods Frameworks */ = {
+		F2185981C9B8342C821794CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTailorIsRich/Pods-MyTailorIsRich-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,6 +353,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CCD989311F62CDCF009404E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD989381F62CDCF009404E3 /* MyTailorIsRichTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBE9EDE71CAD58360059EF2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +375,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCD9893B1F62CDCF009404E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE9EDEA1CAD58360059EF2D /* MyTailorIsRich */;
+			targetProxy = CCD9893A1F62CDCF009404E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EBE9EDF41CAD58360059EF2D /* Main.storyboard */ = {
@@ -253,6 +404,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CCD9893C1F62CDCF009404E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A195BC0954FDE560497E2064 /* Pods-MyTailorIsRichTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = MyTailorIsRichTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pipo.MyTailorIsRichTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTailorIsRich.app/MyTailorIsRich";
+			};
+			name = Debug;
+		};
+		CCD9893D1F62CDCF009404E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E000B516E91F44E77221F69 /* Pods-MyTailorIsRichTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = MyTailorIsRichTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pipo.MyTailorIsRichTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTailorIsRich.app/MyTailorIsRich";
+			};
+			name = Release;
+		};
 		EBE9EDFD1CAD58360059EF2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -267,8 +456,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -295,6 +486,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -312,8 +504,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -332,6 +526,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -363,6 +559,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CCD9893E1F62CDCF009404E3 /* Build configuration list for PBXNativeTarget "MyTailorIsRichTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCD9893C1F62CDCF009404E3 /* Debug */,
+				CCD9893D1F62CDCF009404E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EBE9EDE61CAD58360059EF2D /* Build configuration list for PBXProject "MyTailorIsRich" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

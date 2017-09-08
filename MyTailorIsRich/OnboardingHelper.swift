@@ -31,10 +31,10 @@ class OnboardingHelper {
                 return AnalyticsHelper.instance.viewMasterEvent
             }
             .take(1)
-            .subscribeNext {
+            .subscribe(onNext: { _ in
                 let alert = UIAlertView(title: "iCloud", message: "Voulez-vous utiliser iCloud pour sauvegarder vos dates ?", delegate: nil, cancelButtonTitle: "Non", otherButtonTitles: "Oui")
                 alert.show()
-            }
+            })
             .addDisposableTo(disposeBag)
     }
 

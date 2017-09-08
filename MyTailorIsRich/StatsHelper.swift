@@ -15,21 +15,21 @@ class StatsHelper {
 
     init() {
         AnalyticsHelper.instance.viewMasterEvent
-            .subscribeNext {
+            .subscribe(onNext: { _ in
                 print("event: view master")
-            }
+            })
             .addDisposableTo(disposeBag)
 
         AnalyticsHelper.instance.createDetailEvent
-            .subscribeNext { next in
-                print("event: create detail - \(next)")
-            }
+            .subscribe(onNext: { date in
+                print("event: create detail - \(date)")
+            })
             .addDisposableTo(disposeBag)
 
         AnalyticsHelper.instance.viewDetailEvent
-            .subscribeNext { next in
-                print("event: view detail - \(next)")
-            }
+            .subscribe(onNext: { date in
+                print("event: view detail - \(date)")
+            })
             .addDisposableTo(disposeBag)
     }
 
