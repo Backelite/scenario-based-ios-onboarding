@@ -13,28 +13,93 @@ import RxBlocking
 import RxTest
 @testable import MyTailorIsRich
 
+enum TestErrors: Error {
+    case anyError
+    case specificError
+}
+
 final class OnboardingHelperTests: XCTestCase {
 
-    func testICloudActivationScenario() {
-        let scenarioDidFinish = expectation(description: "scenario did finish")
+    var scheduler: TestScheduler!
+    var subscription: Disposable!
 
+    override func setUp() {
+        super.setUp()
+        scheduler = TestScheduler(initialClock: 0)
+    }
+
+    override func tearDown() {
+        super.tearDown()
+        scheduler.scheduleAt(1000) { 
+            self.subscription.dispose()
+        }
+    }
+
+    func testICloudActivationScenario() {
         // Given
+        let observer = scheduler.createObserver(Void.self)
         let scenario = OnboardingHelper.iCloudActivationScenario()
-        _ = scenario
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { _ in
-            scenarioDidFinish.fulfill()
-        })
 
         // When
-        DispatchQueue.global(qos: .background).async {
+        _ = scenario.subscribe(observer)
+
+        scheduler.scheduleAt(1) {
             AnalyticsHelper.instance.createDetailEvent.onNext(Date())
             AnalyticsHelper.instance.viewDetailEvent.onNext(Date())
             AnalyticsHelper.instance.viewMasterEvent.onNext()
         }
+        scheduler.start()
 
         // Then
-        wait(for: [scenarioDidFinish], timeout: 3)
+        XCTAssertEqual(observer.events.count, 2) // next and completed
+    }
+
+    func testICloudActivationScenarioDoesNotExecute() {
+        // Given
+        let observer = scheduler.createObserver(Void.self)
+        let scenario = OnboardingHelper.iCloudActivationScenario()
+
+        // When
+        subscription = scenario.subscribe(observer)
+
+        scheduler.scheduleAt(1) {
+            AnalyticsHelper.instance.createDetailEvent.onNext(Date())
+            AnalyticsHelper.instance.viewDetailEvent.onNext(Date())
+            // Don't go back to master
+            // AnalyticsHelper.instance.viewMasterEvent.onNext()
+
+        }
+        scheduler.start()
+
+        // Then
+        XCTAssertEqual(observer.events.count, 0)
+    }
+
+
+    func testICloudActivationScenarioDoesNotExecuteWithError() {
+        // Given
+        let observer = scheduler.createObserver(Void.self)
+        let scenario = OnboardingHelper.iCloudActivationScenario()
+
+        // When
+        subscription = scenario.subscribe(observer)
+
+        scheduler.scheduleAt(1) {
+            AnalyticsHelper.instance.createDetailEvent.onNext(Date())
+            AnalyticsHelper.instance.viewDetailEvent.onNext(Date())
+             AnalyticsHelper.instance.viewMasterEvent.onError(TestErrors.anyError)
+        }
+        scheduler.start()
+
+        // Then
+        XCTAssertEqual(observer.events.count, 1)
+        switch observer.events[0].value {
+        case .error(let type):
+            XCTAssertEqual(type as? TestErrors, TestErrors.anyError)
+            XCTAssertNotEqual(type as? TestErrors, TestErrors.specificError)
+        default:
+            XCTFail()
+        }
     }
 
 }
