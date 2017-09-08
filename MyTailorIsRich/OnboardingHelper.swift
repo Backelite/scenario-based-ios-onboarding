@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class OnboardingHelper {
+public class OnboardingHelper {
 
     let disposeBag = DisposeBag()
 
@@ -20,9 +20,18 @@ class OnboardingHelper {
         }
     }
 
-    private
+    public class func iCloudActivationScenario() -> Observable<Void> {
+        return AnalyticsHelper.instance.createDetailEvent
+            .flatMap { _ in
+                return AnalyticsHelper.instance.viewDetailEvent
+            }
+            .flatMap { _ in
+                return AnalyticsHelper.instance.viewMasterEvent
+            }
+            .take(1)
+    }
 
-    func setupICloudActivationScenario() {
+    private func setupICloudActivationScenario() {
         AnalyticsHelper.instance.createDetailEvent
             .flatMap { _ in
                 return AnalyticsHelper.instance.viewDetailEvent

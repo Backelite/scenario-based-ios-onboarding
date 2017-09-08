@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39146FE377D528540A23BBE5 /* Pods_MyTailorIsRichTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F461E777CE9357EF29A88 /* Pods_MyTailorIsRichTests.framework */; };
+		CCA5139A1F62D11300C92856 /* OnboardingHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA513991F62D11300C92856 /* OnboardingHelperTests.swift */; };
 		CCD989381F62CDCF009404E3 /* MyTailorIsRichTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD989371F62CDCF009404E3 /* MyTailorIsRichTests.swift */; };
 		EBE9EDEF1CAD58360059EF2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EDEE1CAD58360059EF2D /* AppDelegate.swift */; };
 		EBE9EDF11CAD58360059EF2D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EDF01CAD58360059EF2D /* MasterViewController.swift */; };
@@ -38,6 +39,7 @@
 		2E000B516E91F44E77221F69 /* Pods-MyTailorIsRichTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRichTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests.release.xcconfig"; sourceTree = "<group>"; };
 		A195BC0954FDE560497E2064 /* Pods-MyTailorIsRichTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRichTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRichTests/Pods-MyTailorIsRichTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6BE938A3BBA44F9C076A59 /* Pods-MyTailorIsRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTailorIsRich.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTailorIsRich/Pods-MyTailorIsRich.release.xcconfig"; sourceTree = "<group>"; };
+		CCA513991F62D11300C92856 /* OnboardingHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingHelperTests.swift; sourceTree = "<group>"; };
 		CCD989351F62CDCF009404E3 /* MyTailorIsRichTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTailorIsRichTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD989371F62CDCF009404E3 /* MyTailorIsRichTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTailorIsRichTests.swift; sourceTree = "<group>"; };
 		CCD989391F62CDCF009404E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD989371F62CDCF009404E3 /* MyTailorIsRichTests.swift */,
+				CCA513991F62D11300C92856 /* OnboardingHelperTests.swift */,
 				CCD989391F62CDCF009404E3 /* Info.plist */,
 			);
 			path = MyTailorIsRichTests;
@@ -108,8 +111,8 @@
 			children = (
 				EBE9EDED1CAD58360059EF2D /* MyTailorIsRich */,
 				CCD989361F62CDCF009404E3 /* MyTailorIsRichTests */,
-				EBE9EDEC1CAD58360059EF2D /* Products */,
 				B0F6C2CB1C62761A345C9A71 /* Pods */,
+				EBE9EDEC1CAD58360059EF2D /* Products */,
 				53ECEBA5F698949B41A01F5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA5139A1F62D11300C92856 /* OnboardingHelperTests.swift in Sources */,
 				CCD989381F62CDCF009404E3 /* MyTailorIsRichTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
