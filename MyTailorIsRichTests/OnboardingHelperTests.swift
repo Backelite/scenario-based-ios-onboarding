@@ -8,6 +8,7 @@
 
 import Foundation
 import XCTest
+import RxSwift
 import RxBlocking
 import RxTest
 @testable import MyTailorIsRich
@@ -15,20 +16,25 @@ import RxTest
 final class OnboardingHelperTests: XCTestCase {
 
     func testICloudActivationScenario() {
+        let scenarioDidFinish = expectation(description: "scenario did finish")
+
         // Given
-        var testOK = false
         let scenario = OnboardingHelper.iCloudActivationScenario()
-        scenario.subscribe(onNext: { _ in
-            testOK = true
+        _ = scenario
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { _ in
+            scenarioDidFinish.fulfill()
         })
 
         // When
-        AnalyticsHelper.instance.createDetailEvent.onNext(Date())
-        AnalyticsHelper.instance.viewDetailEvent.onNext(Date())
-        AnalyticsHelper.instance.viewMasterEvent.onNext()
+        DispatchQueue.global(qos: .background).async {
+            AnalyticsHelper.instance.createDetailEvent.onNext(Date())
+            AnalyticsHelper.instance.viewDetailEvent.onNext(Date())
+            AnalyticsHelper.instance.viewMasterEvent.onNext()
+        }
 
         // Then
-        XCTAssertTrue(testOK)
+        wait(for: [scenarioDidFinish], timeout: 3)
     }
 
 }
